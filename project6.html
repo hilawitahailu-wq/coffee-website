@@ -1,0 +1,195 @@
+
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Coffee Order</title>
+
+</head>
+<style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  line-height: 1.6;
+  color: #333;
+  background: #fdfdfd;
+}
+
+.header {
+  background: #5c3d2e;
+  color: #fff;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.8rem;
+}
+
+.header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
+
+.header nav a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.hero {
+  background: url('https://source.unsplash.com/1200x400/?coffee-shop') no-repeat center/cover;
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  background-blend-mode: darken;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.hero h2 {
+  font-size: 3rem;
+}
+
+.menu, .order {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.menu h2, .order h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 200px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.order form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 400px;
+  margin: auto;
+}
+
+.order label {
+  font-weight: bold;
+}
+
+.order input, .order select {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+
+.order button {
+  background: #5c3d2e;
+  color: white;
+  padding: 0.7rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.order button:hover {
+  background: #442b1c;
+}
+
+.footer {
+  background: #eee;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+</style>
+
+<body>
+  <header class="header">
+    <h1>Coffee Hub</h1>
+    <nav>
+      <ul>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#order">Order</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Fresh Coffee Delivered</h2>
+    <p>Order your favorite brew online!</p>
+  </section>
+
+  <section id="menu" class="menu">
+    <h2>Our Menu</h2>
+    <div class="cards">
+      <div class="card">
+        <img src="espresso1.jpg" alt="Espresso" />
+        <h3>Espresso</h3>
+        <p>$3.00</p>
+      </div>
+      <div class="card">
+        <img src="lattee.jpg" alt="Latte" />
+        <h3>Latte</h3>
+        <p>$4.50</p>
+      </div>
+      <div class="card">
+        <img src="cappuccino2.jpg" alt="Cappuccino" />
+        <h3>Cappuccino</h3>
+        <p>$4.00</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="order" class="order">
+    <h2>Place Your Order</h2>
+    <form>
+      <label for="name">Your Name</label>
+      <input type="text" id="name" required />
+
+      <label for="drink">Choose a Drink</label>
+      <select id="drink" required>
+        <option value="">--Select--</option>
+        <option value="espresso">Espresso</option>
+        <option value="latte">Latte</option>
+        <option value="cappuccino">Cappuccino</option>
+      </select>
+
+      <label for="quantity">Quantity</label>
+      <input type="number" id="quantity" min="1" max="10" required />
+
+      <button type="submit">Order Now</button>
+    </form>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Coffee Hub. All rights reserved.</p>
+  </footer>
+</body>
+</html>
