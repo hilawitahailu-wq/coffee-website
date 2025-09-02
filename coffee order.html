@@ -1,0 +1,233 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee House</title>
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: "Poppins", sans-serif;
+      background:#0d2a1f;
+      color:#fff;
+      line-height:1.6;
+    }
+
+    /* HEADER */
+    header {
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:15px 30px;
+      background:#0b1e16;
+      position:fixed;
+      top:0; left:0;
+      width:100%;
+      z-index:1000;
+    }
+    header h1 {
+      color:#d4a373;
+      font-size:24px;
+      font-weight:700;
+    }
+    nav
+     {display:flex; gap:20px;
+    }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      font-weight:500;
+      transition:0.3s;
+    }
+    nav a:hover {color:#d4a373;}
+    .btn {
+      background:#d4a373;
+      color:#fff;
+      padding:8px 16px;
+      border:none;
+      border-radius:6px;
+      cursor:pointer;
+      font-weight:600;
+    }
+
+    /* HERO */
+    .hero {
+      height:100vh;
+      background:url("https://source.unsplash.com/1600x900/?coffee,beans") no-repeat center center/cover;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      flex-direction:column;
+      text-align:center;
+      padding:20px;
+    }
+    .hero h2 {
+      font-size:48px;
+      margin-bottom:10px;
+      color:#fff;
+      text-shadow:0 4px 10px rgba(0,0,0,0.5);
+    }
+    .hero p {
+      font-size:20px;
+      max-width:600px;
+      margin-bottom:20px;
+      color:#eee;
+    }
+
+    /* ABOUT */
+    .about {
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+      padding:80px 20px;
+      align-items:center;
+      max-width:1100px;
+      margin:auto;
+    }
+    .about img {
+      width:100%;
+      border-radius:12px;
+    }
+    .about h2 {
+      color:#d4a373;
+      margin-bottom:15px;
+    }
+
+    /* MENU */
+    .menu {
+      padding:80px 20px;
+      text-align:center;
+      max-width:1100px;
+      margin:auto;
+    }
+    .menu h2 {color:#d4a373;margin-bottom:30px;}
+    .menu-items {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+      gap:20px;
+    }
+    .card {
+      background:#fff;
+      color:#000;
+      border-radius:12px;
+      overflow:hidden;
+      box-shadow:0 4px 10px rgba(0,0,0,0.3);
+      transition:transform 0.3s;
+    }
+    .card:hover {transform:translateY(-8px);}
+    .card img {width:100%;height:200px;object-fit:cover;}
+    .card h3 {padding:15px;font-size:20px;}
+
+    /* MAP */
+    .map {
+      padding:80px 20px;
+      text-align:center;
+    }
+    .map h2 {color:#d4a373;margin-bottom:20px;}
+    .map iframe {
+      width:100%; max-width:900px; height:350px;
+      border:none; border-radius:12px;
+    }
+
+    /* CONTACT */
+    .contact {
+      padding:80px 20px;
+      text-align:center;
+      max-width:600px;
+      margin:auto;
+    }
+    .contact h2 {color:#d4a373;margin-bottom:20px;}
+    form input, form textarea {
+      width:100%;
+      padding:12px;
+      margin:10px 0;
+      border:none;
+      border-radius:6px;
+    }
+    form button {
+      background:#d4a373;
+      border:none;
+      padding:12px;
+      width:100%;
+      border-radius:6px;
+      color:#fff;
+      font-weight:bold;
+      cursor:pointer;
+    }
+
+    /* FOOTER */
+    footer {
+      background:#0b1e16;
+      text-align:center;
+      padding:30px;
+    }
+    footer img {width:140px;margin-top:10px;}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .about {grid-template-columns:1fr;}
+      nav {display:none;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Coffee House</h1>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#menu">Menu</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="btn">Order Now</button>
+  </header>
+<!-- HERO -->
+  <section class="hero" id="hero">
+    <h2>Welcome to Coffee House</h2>
+    <p>Freshly brewed coffee and artisan doughnuts made with love. Visit us for the perfect cup!</p>
+    <a href="#menu" class="btn">Explore Menu</a>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about" id="about">
+    <img src="coffeeshop3.jpg" alt="Coffee Shop">
+    <div>
+      <h2>Our Story</h2>
+      <p>
+        At Coffee House, we believe in more than just coffee – we believe in community. 
+        Our beans are ethically sourced, roasted to perfection, and brewed with passion. 
+        Whether you're here for a quick espresso or a cozy afternoon, our doors are always open.
+      </p>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section class="menu" id="menu">
+    <h2>Our Specials</h2>
+    <div class="menu-items">
+      <div class="card">
+        <img src="pistachio.jpg" alt="Pistachio">
+        <h3>Pistachio Doughnut</h3>
+      </div>
+      <div class="card">
+        <img src="biscoff.jpg" alt="Biscoff">
+        <h3>Biscoff Doughnut</h3>
+      </div>
+      <div class="card">
+        <img src="pumpkin.jpg" alt="Pumpkin">
+        <h3>Pumpkin Doughnut</h3>
+      </div>
+      <div class="card">
+        <img src="caramel.jpg" alt="Latte">
+        <h3>Caramel Latte</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAP -->
+  <section class="map">
+    <h2>Find Us</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19807.072224
